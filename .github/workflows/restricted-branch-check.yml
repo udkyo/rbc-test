@@ -1,0 +1,14 @@
+name: Restricted Branch Check
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  run-check:
+    uses: udkyo/gha-test/.github/workflows/restricted-branch-check.yml@v1.0.0
+  secrets:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    JIRA_URL: ${{ secrets.JIRA_URL }}
+    JIRA_USERNAME: ${{ secrets.JIRA_USERNAME }}
+    JIRA_TOKEN: ${{ secrets.JIRA_TOKEN }}
