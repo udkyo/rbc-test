@@ -6,7 +6,7 @@ on:
 
 jobs:
   run-check:
-    uses: udkyo/workflow/.github/workflows/restricted-branch-check.yml@v1.0.0
+    uses: udkyo/gha-test/.github/workflows/restricted-branch-check.yml@v1.0.0
     with:
       head_ref: ${{ github.event.pull_request.head.ref }}
       head_repo: ${{ github.event.pull_request.head.repo.full_name }}
